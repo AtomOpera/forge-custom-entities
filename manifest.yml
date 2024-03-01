@@ -7,5 +7,27 @@ modules:
   function:
     - key: main
       handler: index.run
+permissions:
+  scopes:
+    - storage:app
 app:
   id: ari:cloud:ecosystem::app/ce1bbf4c-2f14-4193-819c-b7fc72bc6521
+  storage:
+    entities:
+      - name: "users"
+        attributes:
+          name:
+            type: "string"
+          age:
+            type: "integer"
+          country:
+            type: "string"
+        indexes:
+          - name: "by-country"
+            range:
+              - "country"
+          - name: "by-country-name"
+            range:
+              - "name"
+            partition:
+              - "country"
