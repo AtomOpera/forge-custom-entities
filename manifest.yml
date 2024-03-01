@@ -1,0 +1,11 @@
+modules:
+  macro:
+    - key: user-management-via-entities-hello-world
+      function: main
+      title: user-management-via-entities
+      description: Inserts Hello world!
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/ce1bbf4c-2f14-4193-819c-b7fc72bc6521
