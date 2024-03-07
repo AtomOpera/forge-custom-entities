@@ -1,9 +1,18 @@
-import ForgeUI, { render, Fragment, Macro, Text } from "@forge/ui";
+import ForgeUI, { render, Fragment, Macro, Tabs, Tab } from "@forge/ui";
+import CreateUser from "./create-user";
+import QueryUsers from "./query-user"
 
 const App = () => {
   return (
     <Fragment>
-      <Text>Hello world!</Text>
+      <Tabs>
+        <Tab label="Create users">
+          <CreateUser />
+        </Tab>
+        <Tab label="Query users">
+          <QueryUsers />
+        </Tab>
+      </Tabs>
     </Fragment>
   );
 };
